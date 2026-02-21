@@ -1,55 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produto - DOM7STORE</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
-  <a href="index.html">⬅ Voltar</a>
-</header>
+<a href="index.html">← Voltar</a>
 
 <div class="produto-page">
-
-  <img src="IMG_DO_PRODUTO_AQUI.jpg" class="produto-img">
-
-  <div class="produto-info">
-    <h1 id="nomeProduto">Nome do Produto</h1>
-
+  <img id="imgProduto">
+  <div>
+    <h1 id="nome"></h1>
     ⭐⭐⭐⭐⭐ (0 avaliações)
-
-    <p><del>R$XXX,XX</del></p>
-    <h2>R$XX,XX</h2>
+    <p class="old" id="old"></p>
+    <p class="price" id="price"></p>
 
     <button onclick="comprar()">Comprar agora</button>
     <button onclick="addCarrinho()">Adicionar ao carrinho</button>
+
+    <h3>Descrição</h3>
+    <ul>
+      <li>✔ Produto digital</li>
+      <li>✔ Entrega rápida</li>
+      <li>✔ Suporte garantido</li>
+    </ul>
   </div>
 </div>
-
-<div class="descricao">
-  <h3>Descrição</h3>
-  <p>
-    👉 Aqui você pode editar depois<br>
-    ✔ Entrega rápida<br>
-    ✔ Produto digital<br>
-    ✔ Suporte garantido
-  </p>
-</div>
-
-<script>
-function comprar(){
-  window.location.href = "pay.html";
-}
-
-function addCarrinho(){
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(document.getElementById("nomeProduto").innerText);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Adicionado ao carrinho!");
-}
-</script>
 
 </body>
 </html>
