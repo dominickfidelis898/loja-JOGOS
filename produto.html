@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Produto | DOM7STORE</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/cart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produto</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/app.js"></script>
 </head>
 <body>
 
 <header class="topo">
-  <div class="logo">DOM7STORE <span class="check">✔</span></div>
-  <a href="carrinho.html" class="cart">🛒 Carrinho</a>
+  <a href="index.html">← Voltar</a>
+  <a href="carrinho.html">🛒 Carrinho</a>
 </header>
 
 <main class="produto-container">
-  <div class="produto-img">
-    <!-- TROQUE A IMAGEM -->
-    <img src="assets/img/produto.jpg" alt="Produto">
-  </div>
+  <img src="assets/img/produto.jpg">
 
-  <div class="produto-info">
-    <h1>God of War</h1>
+  <div>
+    <h1 id="nome"></h1>
+    ⭐⭐⭐⭐⭐
+    <p class="old">R$ 250,00</p>
+    <p class="price" id="preco"></p>
 
-    <div class="avaliacao">
-      ⭐⭐⭐⭐⭐ <span>(124 avaliações)</span>
-    </div>
-
-    <div class="precos">
-      <span class="old">R$ 250,00</span>
-      <span class="price">R$ 19,99</span>
-    </div>
-
-    <button class="btn-buy" onclick="comprarAgora('God of War',19.99)">
-      COMPRAR AGORA
-    </button>
-
-    <button class="btn-cart" onclick="addCarrinho('God of War',19.99)">
-      ADICIONAR AO CARRINHO
-    </button>
+    <button class="btn-buy" onclick="comprarAgora()">COMPRAR AGORA</button>
+    <button class="btn-cart" onclick="addCarrinho()">ADICIONAR AO CARRINHO</button>
 
     <div class="descricao">
       <h3>Descrição</h3>
       <ul>
         <li>✔ Produto digital</li>
-        <li>✔ Entrega rápida após confirmação</li>
+        <li>✔ Entrega rápida</li>
         <li>✔ Suporte via WhatsApp</li>
-        <li>✔ Acesso garantido</li>
       </ul>
     </div>
   </div>
 </main>
-
-<footer class="rodape">
-  Suporte: tremmedroso679@gmail.com
-</footer>
 
 </body>
 </html>
