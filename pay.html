@@ -1,1 +1,27 @@
+<h2>Pagamento via PIX</h2>
 
+<p><strong>⚠ Digite o valor correto ao enviar o PIX para não haver erros.</strong></p>
+
+<textarea readonly>
+00020126360014br.gov.bcb.pix0114+5522992056090520400005303986540559.905802BR5924ANNA LUISA FIDELIS NEVES6009Sao Paulo62290525REC6999607016ADA9780845786304881F
+</textarea>
+
+<button onclick="copyPix()">COPIAR PIX</button>
+
+<img src="LINK_DO_QR_AQUI">
+
+<div id="jaPaguei" style="display:none;">
+  <a href="https://wa.me/5522981312812?text=Olá,%20já%20paguei%20meu%20pedido%20na%20DOM7STORE">
+    <button>JÁ PAGUEI</button>
+  </a>
+</div>
+
+<script>
+function copyPix() {
+  navigator.clipboard.writeText(document.querySelector("textarea").value);
+}
+
+setTimeout(() => {
+  document.getElementById("jaPaguei").style.display = "block";
+}, 10000);
+</script>
