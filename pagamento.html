@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pagamento</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container card">
+  <h2>Pagamento PIX</h2>
+
+  <p><strong>⚠️ Digite o valor correto ao pagar</strong></p>
+
+  <textarea rows="4" readonly onclick="copiarPix()">
+00020126360014br.gov.bcb.pix0114+5522992056090520400005303986540559.905802BR5924ANNA LUISA FIDELIS NEVES6009Sao Paulo62290525REC6999607016ADA9780845786304881F
+  </textarea>
+
+  <button class="btn-buy" onclick="copiarPix()">Copiar PIX</button>
+
+  <br><br>
+  <button class="btn-cart"
+    onclick="window.location.href='https://wa.me/5522981312812?text=Já paguei o PIX da DOM7STORE'">
+    JÁ PAGUEI
+  </button>
+</div>
+
+<script>
+function copiarPix(){
+  navigator.clipboard.writeText(document.querySelector("textarea").value);
+  alert("PIX copiado!");
+}
+</script>
+
+</body>
+</html>
