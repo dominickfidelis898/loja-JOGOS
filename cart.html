@@ -1,27 +1,76 @@
-<h2>Pagamento via PIX</h2>
-
-<p><strong>⚠ Digite o valor correto ao enviar o PIX para não haver erros.</strong></p>
-
-<textarea readonly>
-00020126360014br.gov.bcb.pix0114+5522992056090520400005303986540559.905802BR5924ANNA LUISA FIDELIS NEVES6009Sao Paulo62290525REC6999607016ADA9780845786304881F
-</textarea>
-
-<button onclick="copyPix()">COPIAR PIX</button>
-
-<img src="LINK_DO_QR_AQUI">
-
-<div id="jaPaguei" style="display:none;">
-  <a href="https://wa.me/5522981312812?text=Olá,%20já%20paguei%20meu%20pedido%20na%20DOM7STORE">
-    <button>JÁ PAGUEI</button>
-  </a>
-</div>
-
-<script>
-function copyPix() {
-  navigator.clipboard.writeText(document.querySelector("textarea").value);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-setTimeout(() => {
-  document.getElementById("jaPaguei").style.display = "block";
-}, 10000);
-</script>
+body {
+  background: radial-gradient(circle at top, #2b0000, #000);
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #000;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.card {
+  background: #0d0d0d;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255,0,0,.2);
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-buy {
+  background: red;
+  color: white;
+}
+
+.btn-cart {
+  background: #111;
+  color: white;
+  border: 1px solid red;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+}
