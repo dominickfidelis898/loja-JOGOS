@@ -8,30 +8,81 @@
 <body>
 
 <header>
-  <h1>🔥 LOJA GAMEr</h1>
-  <input type="text" placeholder="Buscar jogos...">
+  <h1>🔥 LOJA GAMER</h1>
 </header>
 
-<section class="beneficios">
-  <div>🔒 100% Seguro</div>
-  <div>⚡ Entrega Rápida</div>
-  <div>🛡️ Garantia</div>
-  <div>💬 Suporte</div>
-</section>
-
 <section class="produtos">
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.jpg">
-    <h2>Resident Evil</h2>
-    <p class="preco">R$ 59,90</p>
 
-      <a class="comprar"
-        href="00020126360014br.gov.bcb.pix0114+5522992056090520400005303986540559.905802BR5924ANNA LUISA FIDELIS NEVES6009Sao Paulo62290525REC6999607016ADA9780845786304881F"
-        target="_blank">
-     Comprar agora
-    </a>
+  <!-- PRODUTO 1 -->
+  <div class="card">
+    <img src="https://www.bing.com/ck/a?!&&p=0248f9a1dc7c920f5115439f4fe7fb0d929d85aa143f0639326ddc4e8603ec2fJmltdHM9MTc3MTYzMjAwMA&ptn=3&ver=2&hsh=4&fclid=38fab739-4387-6f37-136d-a1d542126eda&u=a1L2ltYWdlcy9zZWFyY2g_cT1mb3RvK2RlK2NvbnRhcytjb20rYXJtYXMrYXRyaWJ1dGFkYXMrZmYmaWQ9MTAyNTVFNzY2N0RGNTM4MjYzRTg4OTkzMzQ0QzBDMzEwNzQ2NjBDRSZGT1JNPUlBQ0ZJUg&ntb=1">
+    <h2>CONTAS FULL ARMAS ATT FREE FIRE</h2>
+    <p class="preco">R$ 59,90</p>
+    <button onclick="abrirPix()">Comprar</button>
   </div>
+
+  <!-- PRODUTO 2 -->
+  <div class="card">
+    <img src="https://www.bing.com/ck/a?!&&p=086621980b44d5e4ae95b406dfcdce512c327f6d0c2c6acd493ce0c31960e94dJmltdHM9MTc3MTU0NTYwMA&ptn=3&ver=2&hsh=4&fclid=38fab739-4387-6f37-136d-a1d542126eda&u=a1L2ltYWdlcy9zZWFyY2g_cT1mb3RvK2RlK2NvbnRhcytmZitsZXZlbCsxNSZpZD1GOTZBQTQxQkU0MzAxNUQ4REI2Qzk3MUYxNDAxMTRGN0IwODY0RkJGJkZPUk09SUFDRklS&ntb=1">
+    <h2>CONTAS LEVEL 15</h2>
+    <p class="preco">R$ 3,50</p>
+    <button>Comprar</button>
+  </div>
+
+  <!-- PRODUTO 3 -->
+  <div class="card">
+    <img src="https://www.bing.com/images/search?view=detailV2&ccid=KLWVGh6a&id=135C308A55D609A8239CDAFB6ABDD6682F5B6EE2&thid=OIP.KLWVGh6axyCeQekyENTTvQHaEK&mediaurl=https%3a%2f%2fwallpapercave.com%2fwp%2fwp1809630.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.28b5951a1e9ac7209e41e93210d4d3bd%3frik%3d4m5bL2jWvWr72g%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1920&q=foto+gta+5&FORM=IRPRST&ck=5DBC506F48278F5067AAE7562485179F&selectedIndex=0&itb=0">
+    <h2>GTA 5 PC</h2>
+    <p class="preco">R$ 39,99</p>
+    <button>Comprar</button>
+  </div>
+
+  <!-- PRODUTO 4 -->
+  <div class="card">
+    <img src="IMAGEM_AQUI.jpg">
+    <h2>GRUPO DISCORD + BOT DE APOSTA</h2>
+    <p class="preco">R$ 39,99</p>
+    <button>Comprar</button>
+  </div>
+
+  <!-- PRODUTO 5 -->
+  <div class="card">
+    <img src="IMAGEM_AQUI.jpg">
+    <h2>CONTAS ROBLOX COM 800 ROBUX</h2>
+    <p class="preco">R$ 40,99</p>
+    <button>Comprar</button>
+  </div>
+
 </section>
+
+<!-- MODAL PIX -->
+<div id="pixModal" class="modal">
+  <div class="modal-content">
+    <h3>💸 PAGAMENTO VIA PIX</h3>
+    <textarea id="pixCode" readonly>
+00020126360014br.gov.bcb.pix0114+5522992056090520400005303986540559.905802BR5924ANNA LUISA FIDELIS NEVES6009Sao Paulo62290525REC6999607016ADA9780845786304881F
+    </textarea>
+    <button onclick="copiarPix()">COPIAR PIX</button>
+    <button class="fechar" onclick="fecharPix()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function abrirPix() {
+  document.getElementById("pixModal").style.display = "flex";
+}
+
+function fecharPix() {
+  document.getElementById("pixModal").style.display = "none";
+}
+
+function copiarPix() {
+  const pix = document.getElementById("pixCode");
+  pix.select();
+  document.execCommand("copy");
+  alert("PIX copiado! Agora é só pagar 😈🔥");
+}
+</script>
 
 </body>
 </html>
