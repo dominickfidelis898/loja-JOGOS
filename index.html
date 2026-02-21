@@ -1,102 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>DOM7STORE</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM7STORE</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
-  <div class="logo">DOM7STORE <span class="verificado">✔</span></div>
-
-  <input type="text" placeholder="Procurar produto..." class="search">
-
-  <div class="menu">
-    <a href="#" onclick="openCart()">🛒 Carrinho (<span id="cartCount">0</span>)</a>
-    <a href="login.html">Entrar / Login</a>
+  <h1>DOM7STORE <span class="verificado">✔</span></h1>
+  <input type="text" placeholder="Procurar produto">
+  <div>
+    <button onclick="irCarrinho()">🛒 Carrinho</button>
+    <button onclick="window.location='login.html'">Entrar / Login</button>
   </div>
 </header>
 
-<section class="hero">
-  <h1>A Melhor Loja de Produtos Digitais</h1>
-  <p>100% Seguro • Entrega Rápida • Suporte 24/7</p>
+<section class="produtos">
+  <h2>NOVIDADES</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="img/gow.jpg">
+      <h3>God of War</h3>
+      <p class="old">R$250,00</p>
+      <p class="price">R$19,99</p>
+      <button onclick="abrirProduto('gow')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/gta.jpg">
+      <h3>GTA V Enhanced</h3>
+      <p class="old">R$180,00</p>
+      <p class="price">R$14,99</p>
+      <button onclick="abrirProduto('gta')">Comprar</button>
+    </div>
+  </div>
+
+  <h2>CONTAS</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/ff.jpg">
+      <h3>Free Fire Level 15</h3>
+      <p class="old">R$4,00</p>
+      <p class="price">R$2,99</p>
+      <button onclick="abrirProduto('ff')">Comprar</button>
+    </div>
+  </div>
 </section>
 
-<h2>🔥 NOVIDADES</h2>
-
-<div class="products">
-  <!-- PRODUTO -->
-  <div class="card">
-    <img src="IMG_AQUI.jpg">
-    <h3>God of War</h3>
-    <p><del>R$250,00</del></p>
-    <strong>R$19,99</strong>
-    <a href="product.html?id=gow">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <img src="IMG_AQUI.jpg">
-    <h3>GTA V Enhanced Legacy</h3>
-    <p><del>R$180,00</del></p>
-    <strong>R$14,99</strong>
-    <a href="product.html?id=gta">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <img src="IMG_AQUI.jpg">
-    <h3>I’m Not a Human</h3>
-    <p><del>R$50,00</del></p>
-    <strong>R$17,90</strong>
-    <a href="product.html?id=human">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <img src="IMG_AQUI.jpg">
-    <h3>EA SPORTS FC 26</h3>
-    <p><del>R$400,00</del></p>
-    <strong>R$50,00</strong>
-    <a href="product.html?id=fc26">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <img src="IMG_AQUI.jpg">
-    <h3>Red Dead Redemption 2</h3>
-    <p><del>R$299,99</del></p>
-    <strong>R$24,99</strong>
-    <a href="product.html?id=rdr2">Comprar agora</a>
-  </div>
-</div>
-
-<h2>🎮 CONTAS</h2>
-
-<div class="products">
-  <div class="card">
-    <h3>Free Fire Level 15</h3>
-    <p><del>R$4,00</del></p>
-    <strong>R$2,99</strong>
-    <a href="product.html?id=ff">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <h3>Conta Roblox 500 Robux</h3>
-    <p><del>R$40,00</del></p>
-    <strong>R$31,99</strong>
-    <a href="product.html?id=roblox">Comprar agora</a>
-  </div>
-
-  <div class="card">
-    <h3>Conta Valorant (Skin Aleatória)</h3>
-    <p><del>R$80,00</del></p>
-    <strong>R$40,00</strong>
-    <a href="product.html?id=valorant">Comprar agora</a>
-  </div>
-</div>
-
 <footer>
-  <p>Suporte: <strong>tremmedroso679@gmail.com</strong></p>
+  Suporte: tremmedroso679@gmail.com
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
